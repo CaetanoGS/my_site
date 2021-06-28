@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const routes = require('./src/routes/routes');
 const app = express();
 
+app.use(express.static('./src/static/'));
 app.set('views','./src/views/templates/');
 app.set('view engine','ejs');
 app.use(bodyParser.json());
